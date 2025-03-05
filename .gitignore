@@ -1,0 +1,14 @@
+# Go build artifacts
+*.exe
+*.out
+*.test
+
+# Go modules
+/go/bin/
+/go/pkg/
+/go/src/
+vendor/
+
+# Logs & temp files
+*.log
+*.swp
