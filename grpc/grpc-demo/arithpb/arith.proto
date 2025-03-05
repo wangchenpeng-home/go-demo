@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package arith;
+
+option go_package = "./arithpb";
+
+// 定义 gRPC 服务
+service Arith {
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse);
+}
+
+// 定义请求结构
+message MultiplyRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+// 定义响应结构
+message MultiplyResponse {
+  int32 result = 1;
+}
