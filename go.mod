@@ -5,6 +5,7 @@ go 1.22.0
 toolchain go1.22.12
 
 require (
+	github.com/agiledragon/gomonkey/v2 v2.13.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.9.0
 	github.com/nacos-group/nacos-sdk-go v1.1.5
