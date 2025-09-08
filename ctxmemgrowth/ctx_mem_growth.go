@@ -13,6 +13,9 @@ type Span struct {
 	ParentSpanID string `json:"parent_span_id"`
 }
 
+// 定义空类型用作context key
+type empty struct{}
+
 func main() {
 	const N = 100000
 
