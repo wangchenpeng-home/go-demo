@@ -12,7 +12,7 @@ func main() {
 	// Disable timestamp prefix in log output
 	log.SetFlags(0)
 	log.SetPrefix("")
-	wsURL := "xxx"
+	wsURL := "wss://ws2.unify-test-1.bybit.com/private"
 	// 1. 建立 WebSocket 长连接
 	conn, _, err := websocket.DefaultDialer.Dial(wsURL, nil)
 	if err != nil {
@@ -38,7 +38,7 @@ func main() {
 	// 3. 发送登录
 	loginPayload := map[string]interface{}{
 		"op":   "login",
-		"args": []interface{}{1000523071}, // 把这里替换成你自己的 accountId 或 token  1000523059
+		"args": []interface{}{"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDAwNTIzMDU5LCJiIjowLCJwIjowLCJ1YSI6IiIsImdlbl90cyI6MTc1MTg1OTU0NiwiZXhwIjoxNzUxODU5ODQ2LCJucyI6IiIsImQiOmZhbHNlLCJzaWQiOiJCWUJJVCJ9.SJogzrVt4PtDPPJve1Bmax_OEQXf74tufFmRCn_WP6g"}, // 把这里替换成你自己的 accountId 或 token 1000992325  1000523059-3059971
 	}
 	if err := conn.WriteJSON(loginPayload); err != nil {
 		log.Fatalf("login write error: %v", err)
